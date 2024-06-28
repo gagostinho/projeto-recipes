@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    {% include 'recipes/partials/head.html'%}
+    <title>{% block title %}{% endblock title %} Recipes</title>
+</head>
+
+<body>
+    <!-- Header -->
+    {% include 'recipes/partials/header.html' %}
+
+    <!-- Search input -->
+    {% include 'recipes/partials/search.html' %}
+
+    <!-- Recipes Cards -->
+    <main class="main-content-container">
+        {% comment %} Block para incluir partes dinamicas do site ou aplicativo {% endcomment %}
+        {% block content %}{% endblock content %}
+    </main>
+
+    <!-- Footer da Página -->
+    {% include "recipes/partials/footer.html" %}
+</body>
+
+</html>
