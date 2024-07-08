@@ -17,7 +17,9 @@ def home(request):
 
 def category(request, category_id):
     all_recipes = get_list_or_404(
-        Recipe.objects.filter(category__id=category_id, is_pablish=True).order_by(
+        Recipe.objects.filter(
+            category__id=category_id, is_pablish=True
+        ).order_by(  # noqa E501
             "-id"
         ),
     )

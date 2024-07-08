@@ -23,6 +23,7 @@ from django.urls import include, path
 # Leitura para URLs das páginas HTML da pagina
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # inclui todas as URLs que estão em Recipes folders
     path("", include("recipes.urls")),
 ]
 
